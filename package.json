@@ -1,0 +1,31 @@
+{
+  "name": "susannacasali-web",
+  "version": "0.1.0",
+  "description": "Susanna Casali portfolio website.",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somoscuatro/susannacasali-web.git"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "designer",
+    "ui/ux",
+    "ui",
+    "design",
+    "ux",
+    "research"
+  ],
+  "author": "Luca Pipolo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/somoscuatro/susannacasali-web/issues"
+  },
+  "homepage": "https://github.com/somoscuatro/susannacasali-web#readme"
+}
