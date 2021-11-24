@@ -1,17 +1,25 @@
+/**
+ * Global styling.
+ *
+ * 1. Used to invert icon colours on dark mode switch.
+ */
+
+/* Custom Properties */
 :root {
   --body-bg: #fff;
   --text-color: #000;
-  --icon-color: 0%;
+  --icon-color: 0%; /* 1 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: #f2f2f2;
     --body-bg: #0c1824;
-    --icon-color: 100%;
+    --icon-color: 100%; /* 1 */
   }
 }
 
+/* General */
 body {
   background-color: var(--body-bg);
   color: var(--text-color);
@@ -23,6 +31,7 @@ a {
   text-decoration: none;
 }
 
+/* Containers */
 .container {
   display: flex;
   flex-direction: column;
@@ -31,6 +40,7 @@ a {
   text-align: center;
 }
 
+/* Titles */
 .title {
   animation: gradientBg 8s ease infinite;
   margin: 0;
@@ -42,6 +52,26 @@ a {
   font-size: 4.5rem;
 }
 
+.subtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 2.25rem;
+}
+
+/* Socials */
+.socials {
+  margin-top: 4rem;
+}
+
+.social__link {
+  margin: 0 1rem;
+}
+
+.social__image {
+  filter: invert(var(--icon-color)); /* 1 */
+}
+
+/* Animations */
 @keyframes gradientBg {
   0% {
     background-position: 0% 50%;
@@ -52,22 +82,4 @@ a {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.subtitle {
-  margin: 0;
-  font-weight: 400;
-  font-size: 2.25rem;
-}
-
-.socials {
-  margin-top: 4rem;
-}
-
-.social__link {
-  margin: 0 1rem;
-}
-
-.social__image {
-  filter: invert(var(--icon-color));
 }
