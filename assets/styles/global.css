@@ -1,40 +1,73 @@
+:root {
+  --body-bg: #fff;
+  --text-color: #000;
+  --icon-color: 0%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #f2f2f2;
+    --body-bg: #0c1824;
+    --icon-color: 100%;
+  }
+}
+
 body {
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
 }
 
 .title {
-    font-size: 4.5rem;
-    margin: 0;
-    font-weight: 800;
-    background: linear-gradient(-45deg, #5AF78E, #FF85B8, #94D0FF, #F3F99D);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientBg 10s ease infinite;
+  animation: gradientBg 8s ease infinite;
+  margin: 0;
+  background-image: linear-gradient(-45deg, #f3f99d, #ff85b8, #94d0ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  font-size: 4.5rem;
+}
+
+@keyframes gradientBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .subtitle {
-    font-size: 2.25rem;
-    margin: 0;
-    font-weight: 400;
+  margin: 0;
+  font-weight: 400;
+  font-size: 2.25rem;
 }
 
 .socials {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
 
 .social__link {
-    margin: 0 1rem;
+  margin: 0 1rem;
+}
+
+.social__image {
+  filter: invert(var(--icon-color));
 }
